@@ -1,0 +1,82 @@
+// The Data Definition Language (DDL) for the cs332t19 database
+
+CREATE TABLE Professor(
+  SSN numeric(9) primary key,
+  PName varchar(20),
+  PAddress carchar(40),
+  PTeleNum numeric(10),
+  Sex enum('M', 'F'),
+  PTitle varchar(10),
+  Salary numeric(7)
+);
+
+CREATE TABLE Department(
+  DNumber numeric(10) primary key,
+  DName varchar(10),
+  DTeleNum numeric(10),
+  Location varchar(20),
+  PSSN numeric(9),
+  foreign key (PSSN) references Professor(SSN)
+);
+
+CREATE TABLE Student(
+  CWID numeric(9) primary key,
+  SName varchar(20),
+  SAddress varchar(40),
+  STeleNum numeric(10),
+  DepartNum numeric(10),
+  foreign key (DepartNum) references Department (DNumber)
+);
+
+CREATE TABLE Minor(
+  SCWID numeric(9),
+  DNum numeric(10),
+  primary key (SCWID, DNum),
+  foreign key (SCWID) references Student (CWID),
+  foreign key (DNum) references Department (DNumber)
+);
+
+CREATE TABLE Course(
+  CNumber numeric(10) primary key,
+  CTitle varchar(10),
+  Textbook varchar(10),
+  Units numeric(1),
+  DeptNum numeric(10),
+  foreign key (DeptNum) references Department (DNumber)
+);
+
+CREATE TABLE Sections(
+  CourseNum numeric(10),
+  SNumber numeric(10),
+  Classroom varchar(5),
+  NumSeats numeric(4),
+  BeginTime Time,
+  EndTime Time,
+  ProfSSN numeric(9),
+  primary key (CourseNum, SNumber),
+  foreign key (ProfSSN) references Professor (SSN),
+  foreign key (CourseNum) references Course (CNumber)
+);
+
+CREATE TABLE EnrollmentRecord(
+  StudCWID numeric(9),
+  SectionNum numeric (2),
+  Grade varchar(2),
+  primary key (StudCWID, SectionNum),
+  foreign key (StudCWID) references Student (CWID),
+  foreign key (SectionNum) references Sections (SNumber)
+);
+
+CREATE TABLE CollegeDegrees(
+  ProfessorSSN numeric(9),
+  CollegeDegrees varchar(15),
+  primary key (ProfessorSSN, CollegeDegrees),
+  foreign key (ProfessorSSN) references Professor (SSN)
+);
+
+CREATE TABLE MeetingDays(
+  SectionNumber numeric(2),
+  MeetingDays varchar(2),
+  primary key (SectionNumber, MeetingDays),
+  foreign key (SectionNumber) references Sections (SNumber)
+);
