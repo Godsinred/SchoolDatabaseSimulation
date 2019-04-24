@@ -25,7 +25,7 @@ FROM Sections S, MeetingDays MD, Professor P
 WHERE S.ProfSSN = inputSSN AND
       S.CourseNum = MD.CourseNumber AND
       S.SNumber = MD.SectionNumber AND
-      S.ProfSSN = P.SSN;
+      S.ProfSSN = P.SSN; 
 
 ==================================================================================================================
 ==================================================================================================================
@@ -58,7 +58,7 @@ int inputCNum;      // this holds the inputted course number from the user
 
 // Relational Algebra
 R1 <- SELECT CourseNum = inputCNum (Sections)
-R2 <- SELECT MeetingDays.CourseNum = 
+R2 <- SELECT MeetingDays.CourseNum =
 
 // SQL query
 
