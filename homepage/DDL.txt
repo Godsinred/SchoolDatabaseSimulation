@@ -3,7 +3,7 @@
 CREATE TABLE Professor(
   SSN numeric(9) primary key,
   PName varchar(20),
-  PAddress carchar(40),
+  PAddress varchar(40),
   PTeleNum numeric(10),
   Sex enum('M', 'F'),
   PTitle varchar(10),
@@ -47,7 +47,7 @@ CREATE TABLE Course(
 
 CREATE TABLE Sections(
   CourseNum numeric(10),
-  SNumber numeric(10),
+  SNumber numeric(2),
   Classroom varchar(5),
   NumSeats numeric(4),
   BeginTime numeric(4),
@@ -58,13 +58,17 @@ CREATE TABLE Sections(
   foreign key (CourseNum) references Course (CNumber)
 );
 
+// currently not in db
 CREATE TABLE EnrollmentRecord(
   StudCWID numeric(9),
-  SectionNum numeric (2),
+  SectionNum numeric(2),
+  CNum numeric(10),
   Grade varchar(2),
-  primary key (StudCWID, SectionNum),
+  primary key (StudCWID, SectionNum, CNum),
   foreign key (StudCWID) references Student (CWID),
-  foreign key (SectionNum) references Sections (SNumber)
+  foreign key (CNum) references Sections (CourseNum),
+  foreign key (SectionNum) references Sections (SNumber)           // can create table without this line. once this line is added i get: ERROR 1005 (HY000): Can't create table 'cs332t19.EnrollmentRecord' (errno: 150)
+
 );
 
 CREATE TABLE CollegeDegrees(
@@ -74,9 +78,10 @@ CREATE TABLE CollegeDegrees(
   foreign key (ProfessorSSN) references Professor (SSN)
 );
 
+// currently not in db
 CREATE TABLE MeetingDays(
   SectionNumber numeric(2),
   MeetingDays varchar(2),
   primary key (SectionNumber, MeetingDays),
-  foreign key (SectionNumber) references Sections (SNumber)
+  foreign key (SectionNumber) references Sections (SNumber)     // same error as above
 );
