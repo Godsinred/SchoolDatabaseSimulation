@@ -27,7 +27,7 @@
 
   // while there are arrays to be read print them
   while($row = mysql_fetch_array($result)) {
-      echo $row["testCol"]."<br>";
+      echo $row["SSN"]."<br>";
   }
 
   // closes the link between the variable and the server
