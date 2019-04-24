@@ -25,7 +25,7 @@ FROM Sections S, MeetingDays MD, Professor P
 WHERE S.ProfSSN = inputSSN AND
       S.CourseNum = MD.CourseNumber AND
       S.SNumber = MD.SectionNumber AND
-      S.ProfSSN = P.SSN; 
+      S.ProfSSN = P.SSN;
 
 ==================================================================================================================
 ==================================================================================================================
@@ -58,9 +58,29 @@ int inputCNum;      // this holds the inputted course number from the user
 
 // Relational Algebra
 R1 <- SELECT CourseNum = inputCNum (Sections)
-R2 <- SELECT MeetingDays.CourseNum =
+R2 <- (R1 JOIN Course
+        R1.CourseNum = Course.CNumber)
+
+R3 <- (MeetingDays JOIN R2
+        MeetingDays.CourseNumber = R2.CourseNum
+        AND MeetingDays.SectionNumber = R2.SNumber)
+
+R4 <- (EnrollmentRecord JOIN R3
+        EnrollmentRecord.SectionNum = R3.CourseNum
+        AND EnrollmentRecord.CNum = R3.SNumber)
+
+RESULT(CTitle, Classroom, MeetingDays, BeginTime, EndTime, NumberOfStudents) <- SNumber Ƒ COUNT(*)(R4)
 
 // SQL query
+SELECT CTitle, Classroom, MeetingDays, BeginTime, EndTime, COUNT(*)
+FROM Sections S, Course C, MeetingDays MD, EnrollmentRecord ER
+WHERE S.CourseNum = inputCNum AND
+      S.CourseNum = Course.CNumber AND
+      MD.CourseNumber = S.CourseNum AND
+      MD.SectionNumber = S.SNumber AND
+      ER.SectionNum = S.CourseNum AND
+      ER.CNum = S.SNumber
+GROUP BY S.SNumber;
 
 ==================================================================================================================
 ==================================================================================================================

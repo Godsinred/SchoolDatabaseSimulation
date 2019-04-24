@@ -21,7 +21,7 @@
   echo "<p>console.log(Connected to database successfully);</p>";
 
   // basic query for testing
-  $query = "SELECT * from test";
+  $query = "SELECT * from Professor";
   // reaches out to the db and makes the query and returns the result in $result
   $result = mysql_query($query, $link);
 
