@@ -78,7 +78,12 @@
   */
 
   // basic query for testing
-  $query = "SELECT * from Professor";
+  // $query = "SELECT * from Professor";
+
+  // makes a query based on the daat given
+  $query = "SELECT * from Professor WHERE Professor.SSN=" . htmlspecialchars($_GET["search1"]);
+  echo $query."<br><br>";
+
   // reaches out to the db and makes the query and returns the result in $result
   $result = mysql_query($query, $link);
 
@@ -87,6 +92,12 @@
   while($row = mysql_fetch_array($result)) {
       echo $row["SSN"].$row["PName"].$row["PAddress"].$row["PTeleNum"].$row["Sex"].$row["PTitle"].$row["Salary"]."<br>";
   }
+  echo "<br><br>";
+
+  // a test to output data from the form to the php scriting site
+  echo $_GET["search1"];
+  echo "<br><br>";
+  echo $_GET["search2"];
 
   // closes the link between the variable and the server
   mysql_close($link);

@@ -1,0 +1,162 @@
+/*
+  Style sheet for the page
+*/
+
+a:hover img {filter:Alpha(Opacity=60);}
+
+body {
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  font-family: century gothic;
+  font-size: 12px;
+  background: #ffffff url(http://cbimg6.com/layouts/09/01/33463af.png) repeat-y bottom;
+  color: #145C68;
+  scrollbar-arrow-color: #57AEA8;
+  scrollbar-base-color: #FFFFFF;
+  scrollbar-face-color: #FFFFFF;
+  scrollbar-highlight-color: #FFFFFF;
+  scrollbar-shadow-color: #57AEA8;
+  scrollbar-3dlight-color: #FFFFFF;
+  scrollbar-track-color: #FFFFFF;
+  scrollbar-darkshadow-color: #FFFFFF;}
+
+#aqua1{
+  background: url(http://cbimg6.com/layouts/09/01/33463af.png)
+  repeat-y;width:1000px;}
+
+#aqua2 {
+  position:relative;
+  background: url(http://cbimg6.com/layouts/09/01/33463ag.png) no-repeat;
+  width:1000px;
+  height:1000px;
+  text-align: left;}
+  a{
+    text-decoration: none;
+    color: #501D92;}
+    a:hover{
+      color: #FFFFFF;}
+
+
+#aqua3{
+  float:center;
+  margin: 2px 0 0 330px;
+  font: small-caps 15px century gothic bold;
+  color: #8BC4C9;line-height:15px;
+  text-decoration: bold strong;}
+
+#aqua3 a{
+  font: small-caps 15px century gothic;
+  color: #ffffff;}
+
+#aqua3 a:hover{
+  color: #B8D3D8;}
+
+.aqua4 {
+  float:left;
+  margin: 630px 0 0 100px;
+  width: 260px;
+  font:small-caps 12px century gothic;
+  color: #404289;}
+
+.aqua4{
+  color:#200648;}
+
+.aqua4 ul,
+.aqua4 li{
+  list-style:none;
+  margin:0;
+  text-align:center;}
+
+.aqua4 li{
+  border-bottom: 1px dotted #6856AF;
+  border-left: 1px dotted #6856AF;
+  border-top: 1px dotted #6856AF;
+  border-right: 1px dotted #6856AF;
+  width:200px;margin: 1px 1px 1px 1px;
+  padding: 0;}
+
+.aqua4 li
+a{
+  display:block;
+  font: small-caps 12px century gothic;
+  color: #0B6D80;}
+
+.aqua4 li
+a:hover{
+  background: clear;
+  color: #322556;
+  text-decoration: bold strong underline;}
+
+#aqua5 {
+  float:right;
+  overflow: auto;
+  margin: 60px 120px 0 0;
+  width: 440px;
+  text-align:left;
+  font: 12px century gothic;
+  color:#145C68;
+  line-height:15px;}
+
+#aqua6{
+  float:bottom;
+  clear:both;
+  width:1000px;
+  height: 416px;
+  overflow: auto;
+  background: url(http://cbimg6.com/layouts/09/01/33463ah.png) no-repeat;
+  font: small-caps 12px century gothic;color: #ffffff;text-align:left;margin: 0;}
+
+.center{
+  margin: 398px 0 0 360px;
+  font: small-caps 12px century gothic;
+  color: #ffffff;
+  text-align:left;}
+
+#aqua7 {
+  float:right;
+  overflow: auto;
+  margin: 535px 110px 0 0;
+  text-align:left;
+  font: 45px century gothic;color:#796DA0;text-decoration: bold strong;}
+
+li{
+  color:#ffffff;
+  font-weight:regular;
+  font-family:century gothic;
+  font-size:11px;}
+
+b{
+  color: #0C1853;
+  font-weight: bold;
+  font-family: century gothic;
+  font-size: 11px;}
+
+i{
+  color: #796DA0;
+  font-weight: italic;
+  font-family: century gothic;
+  font-size: 11px;}
+
+u{
+  color: #0A4451;
+  font-weight: underline;
+  font-family: century gothic;
+  font-size: 11px;}
+
+h1{
+  font: 35px century gothic;
+  color:#41A8AF;
+  text-decoration: bold strong underline;}
+
+h3{
+  font: 35px century gothic;
+  color:#1B426B;
+  text-decoration: bold strong underline;}
+
+h2{
+  font: 30px century gothic;
+  color:#37748E;
+  text-decoration: bold strong;}
+
+.credit AUTUMN*SUNSETS{filter:alpha(opacity=100);}
