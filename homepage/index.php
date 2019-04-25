@@ -2,7 +2,7 @@
 
 <html>
 <head>
-  <title>First PHP Example</title> </head>
+  <title>School Database Simmulation</title> </head>
 	<script src="assets/helper-functions.js"></script>
 	<link rel="stylesheet" href="assets/styles.css">
 </head>
@@ -47,7 +47,7 @@
 	<div id="aqua7">DATABASES AND FILES</div>
 
 	<div id="aqua5">
-		<h2>Search Results</h2>
+		<h2 id="testing">Search Results</h2>
 		  <?php
 
       // connects to the database and makes a link
@@ -193,6 +193,8 @@
 
       // closes the link between the variable and the server
       mysql_close($link);
+
+      echo '<script>updateSearchResultsTable();</script>';
 
       ?>
 	</div>

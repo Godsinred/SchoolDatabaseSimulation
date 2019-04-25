@@ -10,9 +10,9 @@ function updateSearchType()
   // checks which drop down menu was selected and updates accordingly
   if(userDropDown.value == "Professor")
   {
-      searchTypeDropDown.options[0].text = "Social Security Number";
-      searchTypeDropDown.options[1].text = "Course Number";
-      updateFormOptions();
+    searchTypeDropDown.options[0].text = "Social Security Number";
+    searchTypeDropDown.options[1].text = "Course Number";
+    updateFormOptions();
   }
   else
   {
@@ -80,4 +80,9 @@ function removeExtraSearch()
     // removes the text
     document.getElementById("search2Text").innerHTML = "";
   }
+}
+
+function updateSearchResultsTable()
+{
+  document.getElementById("testing").innerHTML = "ALTER";
 }
