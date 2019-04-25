@@ -1,8 +1,4 @@
-<html> <head>
-<title>First PHP Example</title> </head>
-<body>
-  <?php echo "<h1>TESTNIG FROM index.php</h1>";
-
+<? php
   // connects to the database and makes a link
   $link = mysql_connect('ecs.fullerton.edu', 'cs332t19', 'au0ieLah');
 
@@ -19,6 +15,14 @@
     die("Unable to select database \'cs332t19\'");
   }
   echo "<p>console.log(Connected to database successfully);</p>";
+? >
+
+<html> <head>
+<title>First PHP Example</title> </head>
+<body>
+  <?php echo "<h1>TESTNIG FROM index.php</h1>";
+
+
 
   // basic query for testing
   $query = "SELECT * from Professor";
