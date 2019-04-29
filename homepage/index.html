@@ -7,56 +7,56 @@
 	<link rel="stylesheet" href="assets/styles.css">
 </head>
 
-	<body>
-		<script src="assets/helper-functions.js"></script>
+<body>
+	<script src="assets/helper-functions.js"></script>
 
-		<center>
-			<div id="aqua1">
+	<title>Databases</title>
 
-	<div id="aqua2">
-		<div id="aqua3"> </div>
+	<div id="Header"></div>
 
-	<div class="aqua4">
-		<ul>
-			<h1 id="testing">Queries</h1>
-			<BR><BR><BR><BR><BR><BR>
-			<p align="left">
-				<!-- Drop down list that can be selected for the user type -->
-				<select id="userType" onchange="updateSearchType()">
-				  <option value="Professor">Professor</option>
-				  <option value="Student">Student</option>
-				</select>
+	<div id="Title">
+	Databases and File Systems</div>
 
-				<!-- Drop down list that can be selected for the search type -->
-				<select id="searchType" onchange="updateFormOptions()">
-				  <option value="questionA">Social Security Number</option>
-				  <option value="questionB">Course Number</option>
-				</select>
 
-				<!-- Search form -->
-				<form id="searchForm" action="http://ecs.fullerton.edu/~cs332t19/index.php" method = "get">
-					<input type="submit" value="Search">
-				  <text id="search1Text">Social Security Number</text><input id="searchField1" type="text" name="search1"><br>
-					<text id="search2Text"></text>
-				</form>
+	<div id="Main">
+	<header>Results</header>
 
-			</p>
-		</ul>
+	Jonny is pretty cool but Johanna is even cooler. Gotta take
+	some space up but the search results should end up here if
+	all goes well lmfao the background color is really fucking
+		with me omg <br><br>
+	Okay I fixed it now I feel much better.<br><br>
+
+
 	</div>
 
-	<div id="aqua7">DATABASES AND FILES</div>
 
-	<div id="aqua5">
-		<h2>Search Results</h2>
-	</div>
-	<div id="aqua6">
-		<div class="center">
-			<a href="http://autumnsunsets.com" target="_blank">Autumn*Sunsets</a>
-		© All Rights Reserved . 2009 . [E.V.3]
-		</div>
-	</div>
-</div>
-</center>
+	<div id="Nav">
+	<header>Search</header>
 
+	<!-- Drop down list that can be selected for the user type -->
+	<select id="userType" onchange="updateSearchType()">
+		<option value="Professor">Professor</option>
+		<option value="Student">Student</option>
+	</select>
+	<br><br>
+
+	<!-- Drop down list that can be selected for the search type -->
+	<select id="searchType" onchange="updateFormOptions()">
+		<option value="questionA">Social Security Number</option>
+		<option value="questionB">Course Number</option>
+	</select>
+	<br><br>
+
+	<!-- Search form -->
+	<form id="searchForm" action="http://ecs.fullerton.edu/~cs332t19/index.php" method = "get">
+		<input type="submit" value="Search">
+
+		<br><br>
+		<text id="search1Text">Social Security Number</text><input id="searchField1" type="text" name="search1"><br>
+		<text id="search2Text"></text>
+	</form>
+
+	</div>
 </body>
 </html>
