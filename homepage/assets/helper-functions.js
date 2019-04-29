@@ -84,5 +84,7 @@ function removeExtraSearch()
 
 function updateSearchResultsTable()
 {
+
   document.getElementById("testing").innerHTML = "ALTER";
+
 }
