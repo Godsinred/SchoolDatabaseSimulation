@@ -1,1 +1,26 @@
 // The list of queries that were used to populate the database
+
+// INSERT INTO <table VALUES (<col1>, <col2>....);
+
+INSERT INTO Department VALUES(0000000001, "Computer Science", 7140001337, "Main Campus", 123456789);
+INSERT INTO Department VALUES(0000000002, "English", 3109871234, "Main Campus", 987654321);
+INSERT INTO Department VALUES(0000000003, "Math", 8084278901, "Main Campus", 123451234);
+INSERT INTO Department VALUES(0000000004, "Business", 1234567890, "Irvine Campus", 999999999);
+
+INSERT INTO Professor VALUES(123456789, "Gabriella Ernsberger", "1337 Adams Ave, Costsa Mesa CA 92626", 7146561717, 'F', "Queen Bee", 9999999);
+INSERT INTO Professor VALUES(987654321, "Jenny Choi", "6520  High St, Long Beach CA 90521", 6261234567, 'F', "Professor", 0060000);
+INSERT INTO Professor VALUES(123451234, "Andrew Koines", "54 Bristol Ave, Costsa Mesa CA 92618", 7145910022, 'M', "Professor", 0076000);
+INSERT INTO Professor VALUES(999999999, "Donald Trump", "123 Nutwood, Fullerton CA 90234", 4101237654, 'M', "Professor", 0000001);
+INSERT INTO Professor VALUES(111111111, "Michael Duong", "920 Far Away St, Berkley CA 94051", 7149131504, 'M', "Genius", 1337000);
+
+INSERT INTO Course VALUES(0000012345, "Javascript", "JS 4 noobs", 3, 0000000001);
+INSERT INTO Course VALUES(111111111, "Michael Duong", "920 Far Away St, Berkley CA 94051", 7149131504, 'M', "Genius", 1337000);
+INSERT INTO Course VALUES(111111111, "Michael Duong", "920 Far Away St, Berkley CA 94051", 7149131504, 'M', "Genius", 1337000);
+INSERT INTO Course VALUES(111111111, "Michael Duong", "920 Far Away St, Berkley CA 94051", 7149131504, 'M', "Genius", 1337000);
+INSERT INTO Course VALUES(111111111, "Michael Duong", "920 Far Away St, Berkley CA 94051", 7149131504, 'M', "Genius", 1337000);
+
+CNumber numeric(10) primary key,
+CTitle varchar(10),
+Textbook varchar(10),
+Units numeric(1),
+DeptNum numeric(10),

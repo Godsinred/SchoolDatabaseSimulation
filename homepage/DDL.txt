@@ -12,7 +12,7 @@ CREATE TABLE Professor(
 
 CREATE TABLE Department(
   DNumber numeric(10) primary key,
-  DName varchar(10),
+  DName varchar(20),
   DTeleNum numeric(10),
   Location varchar(20),
   PSSN numeric(9),
