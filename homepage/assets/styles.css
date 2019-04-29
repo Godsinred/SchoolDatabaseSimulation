@@ -4,7 +4,7 @@
 
 body {
   background-color:#ffffff;
-  background-image:url(https://i.ibb.co/bFXcBq9/db-bg.png);
+  background-image:url("db-bg.png");
   background-repeat:repeat-y;
 }
 
@@ -30,14 +30,14 @@ header {
   color:#000000;
   font-family: "Palatino Linotype";
 }
-  
+
 #Header {
   position:absolute;
   left: 0px;
   top:0px;
   height:350px;
   width:1074px;
-  background-image:url(https://i.ibb.co/6Jy43J9/db-banner.png);
+  background-image:url("db-banner.png");
 }
 
 #Main {
@@ -51,7 +51,7 @@ header {
   font-size:13px;
   font-family: Times New Roman;
 }
-  
+
 #Nav {
   position:absolute;
   left:830px;
