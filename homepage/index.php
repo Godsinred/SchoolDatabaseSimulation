@@ -14,10 +14,6 @@
 
 	<div id="Header"></div>
 
-	<div id="Title">
-	Databases and File Systems</div>
-
-
 	<div id="Main">
 	<header>Results</header>
     <?php
