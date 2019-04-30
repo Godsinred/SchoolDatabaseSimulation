@@ -158,6 +158,10 @@
     // echo $_GET["search1"];
     // echo "<br><br>";
     // echo $_GET["search2"];
+  	// echo "<br><br>";
+		// echo $_GET["userType"];
+    // echo "<br><br>";
+    // echo $_GET["searchType"];
 
     // closes the link between the variable and the server
     mysql_close($link);

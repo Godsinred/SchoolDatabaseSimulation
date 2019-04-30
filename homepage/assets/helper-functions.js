@@ -29,6 +29,8 @@ function updateFormOptions()
   var userDropDown = document.getElementById("userType");
   var searchTypeDropDown = document.getElementById("searchType");
   var searchForm = document.getElementById("searchForm");
+  var hiddenSearch1 = document.getElementById("searchFieldHidden1");
+  var hiddenSearch2 = document.getElementById("searchFieldHidden2");
 
   if(userDropDown.value == "Professor" && searchTypeDropDown.value == "questionB")
   {
@@ -42,6 +44,8 @@ function updateFormOptions()
     // updates the text for the search
     document.getElementById("search1Text").innerHTML = "Course Number";
     document.getElementById("search2Text").innerHTML = "Section Number";
+    hiddenSearch1.value = "Professor";
+    hiddenSearch2.value = "questionB";
 
   }
   else if(userDropDown.value == "Professor" && searchTypeDropDown.value == "questionA")
@@ -50,6 +54,9 @@ function updateFormOptions()
 
     // updates the text field of the search label
     document.getElementById("search1Text").innerHTML = "Social Security Number";
+
+    hiddenSearch1.value = "Professor";
+    hiddenSearch2.value = "questionB";
   }
   else if(userDropDown.value == "Student" && searchTypeDropDown.value == "questionA")
   {
@@ -57,6 +64,9 @@ function updateFormOptions()
 
     // updates the text field of the search label
     document.getElementById("search1Text").innerHTML = "Course Number";
+
+    hiddenSearch1.value = "Student";
+    hiddenSearch2.value = "Course Number";
   }
   else
   {
@@ -64,6 +74,9 @@ function updateFormOptions()
 
     // updates the text field of the search label
     document.getElementById("search1Text").innerHTML = "Campus Wide ID";
+
+    hiddenSearch1.value = "Student";
+    hiddenSearch2.value = "Campus Wide ID";
   }
 }
 
@@ -84,6 +97,7 @@ function removeExtraSearch()
 
 function createActionGetRequest()
 {
+  event.preventDefault();
 
   var form = document.getElementById("searchForm");
   var elements = form.elements;
@@ -100,5 +114,9 @@ function createActionGetRequest()
   var searchForm = document.getElementById("searchType");
   values.push(encodeURIComponent("searchType") + '=' + encodeURIComponent(searchForm.value));
 
-  form.action += '?' + values.join('&');
+  // dummy test for GET request
+  form.action = "http://ecs.fullerton.edu/~cs332t19/index.php?" + "search1=987654321" + '&' + "search2=987654321";
+  console.log(form.action);
+  alert('pause');
+  form.submit();
 }
