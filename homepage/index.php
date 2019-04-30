@@ -104,7 +104,7 @@
 
     // while there are arrays to be read print them
     echo "
-    <table>
+    <table id="OutputTable">
       <tr>
         <th>SSN</th>
         <th>PName</th>
