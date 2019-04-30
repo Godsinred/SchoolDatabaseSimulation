@@ -1,0 +1,76 @@
+<head>
+<style type="text/css">
+
+
+body {
+	background-color:#ffffff;
+	background-image:url(https://i.ibb.co/p3f3L34/db-bg.png);
+	background-repeat:repeat-y;
+}
+
+header {
+	color:#656565;
+	font-size:16px;
+	text-align:center;
+	letter-spacing:5px;
+	font-family:"Times New Roman";
+	border-bottom-style: solid;
+    border-bottom-width: 3px;
+	text-transform:uppercase;
+}
+
+#Header {
+	position:absolute;
+	left: 0px;
+	top:0px;
+	height:350px;
+	width:1274px;
+	background-image:url(https://i.ibb.co/YtPX8h3/db-banner.pngg);
+}
+
+#Main {
+	position:absolute;
+	left:230px;
+	top:220px;
+	width:597px;
+	height:405px;
+	z-index:2;
+	color:#656565;
+	font-size:13px;
+	font-family: Times New Roman;
+}
+  
+#Nav {
+	position:absolute;
+	left:859px;
+	top:220px;
+	width:220px;
+	height:566px;
+	color: #656565;
+	font-size:12px;
+    font-family: Times New Roman;
+}
+</style>
+</head>
+
+
+<title>Databases</title>
+
+<div id="Header"></div>
+
+<div id="Main">
+<header>Main</header>
+
+Jonny is pretty cool but Johanna is even cooler. Gotta take
+ some space up but the search results should end up here if
+  all goes well lmfao the background color is really fucking
+	 with me omg <br><br>
+  Okay I fixed it now I feel much better.
+
+</div>
+
+
+<div id="Nav">
+  <header>Other</header>
+- Query Search goes here
+</div>
