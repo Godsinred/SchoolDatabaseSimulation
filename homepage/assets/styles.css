@@ -50,3 +50,15 @@ header {
 	font-size:12px;
     font-family: Times New Roman;
 }
+
+#OutputTable {
+	position:absolute;
+	left:0px;
+	top:120px;
+    width: 597px;
+	font-size: 13px;
+	font-family: Times New Roman;
+	color: #656565;
+	border-style: solid;
+	border-width: 1px;
+}
