@@ -52,9 +52,9 @@ header {
 }
 
 #OutputTable {
-    position:absolute;
-	left:230px;
-	top:350px;
+	position:absolute;
+	left:0px;
+	top:120px;
     width: 597px;
 	font-size: 13px;
 	font-family: Times New Roman;

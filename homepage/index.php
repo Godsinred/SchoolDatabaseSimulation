@@ -104,7 +104,7 @@
 
     // while there are arrays to be read print them
     echo "
-    <table id="OutputTable">
+    <table id ='OutputTable'>
       <tr>
         <th>SSN</th>
         <th>PName</th>
@@ -165,7 +165,7 @@
     echo '<script type="text/javascript">updateSearchResultsTable();</script>';
 
     ?>
-	</div>
+  </div>
 
 
 	<div id="Nav">
