@@ -56,7 +56,7 @@ function updateFormOptions()
     document.getElementById("search1Text").innerHTML = "Social Security Number";
 
     hiddenSearch1.value = "Professor";
-    hiddenSearch2.value = "questionB";
+    hiddenSearch2.value = "questionA";
   }
   else if(userDropDown.value == "Student" && searchTypeDropDown.value == "questionA")
   {
@@ -66,7 +66,7 @@ function updateFormOptions()
     document.getElementById("search1Text").innerHTML = "Course Number";
 
     hiddenSearch1.value = "Student";
-    hiddenSearch2.value = "Course Number";
+    hiddenSearch2.value = "questionA";
   }
   else
   {
@@ -76,7 +76,7 @@ function updateFormOptions()
     document.getElementById("search1Text").innerHTML = "Campus Wide ID";
 
     hiddenSearch1.value = "Student";
-    hiddenSearch2.value = "Campus Wide ID";
+    hiddenSearch2.value = "questionB";
   }
 }
 
@@ -93,30 +93,4 @@ function removeExtraSearch()
     // removes the text
     document.getElementById("search2Text").innerHTML = "";
   }
-}
-
-function createActionGetRequest()
-{
-  event.preventDefault();
-
-  var form = document.getElementById("searchForm");
-  var elements = form.elements;
-  var values = [];
-
-  for (var i = 0; i < elements.length; i++)
-  {
-    values.push(encodeURIComponent(elements[i].name) + '=' + encodeURIComponent(elements[i].value));
-  }
-
-  var userForm = document.getElementById("userType");
-  values.push(encodeURIComponent("userType") + '=' + encodeURIComponent(userForm.value));
-
-  var searchForm = document.getElementById("searchType");
-  values.push(encodeURIComponent("searchType") + '=' + encodeURIComponent(searchForm.value));
-
-  // dummy test for GET request
-  form.action = "http://ecs.fullerton.edu/~cs332t19/index.php?" + "search1=987654321" + '&' + "search2=987654321";
-  console.log(form.action);
-  alert('pause');
-  form.submit();
 }

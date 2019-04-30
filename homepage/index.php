@@ -35,6 +35,91 @@
     }
     echo "<p>console.log(Connected to database successfully);</p>";
 
+    // a test to output data from the form to the php scriting site
+    // echo $_GET["search1"];
+    // echo "<br><br>";
+    // echo $_GET["search2"];
+  	// echo "<br><br>";
+		// echo $_GET["userType"];
+    // echo "<br><br>";
+    // echo $_GET["searchType"];
+
+    // makes a query based on the daat given and prepopulate the table headers
+    $query = "";
+    $tableHeaders = "";
+    $dataLoop;
+    if ($_GET["userType"] == "Professor" && $_GET["searchType"] == "questionA")
+    {
+      $query = "SELECT PTitle, Classroom, MeetingDays, BeginTime, EndTime
+                FROM Sections S, MeetingDays MD, Professor P
+                WHERE S.ProfSSN = " + $_GET["search1"] +
+                " AND S.CourseNum = MD.CourseNumber AND
+                S.SNumber = MD.SectionNumber AND
+                S.ProfSSN = P.SSN";
+
+      $tableHeaders = "<table id ='OutputTable'>
+                        <tr>
+                          <th>SSN</th>
+                          <th>PName</th>
+                          <th>PAddress</th>
+                          <th>PTeleNum</th>
+                          <th>Sex</th>
+                          <th>PTitle</th>
+                          <th>Salary</th>
+                        </tr>";
+
+        $dataLoop = array();
+    }
+    elseif ($_GET["userType"] == "Professor" && $_GET["searchType"] == "questionB")
+    {
+      $query = "SELECT Grade, COUNT(*)
+                FROM EnrollmentRecord ER
+                WHERE ER.SectionNum = " + $_GET["search1"] + " AND
+                  ER.CNum = " + $_GET["search2"] +
+                " GROUP BY Grade";
+
+      $tableHeaders = "<table id ='OutputTable'>
+                        <tr>
+                          <th>Grade</th>
+                          <th>Count</th>
+                        </tr>";
+    }
+    elseif ($_GET["userType"] == "Student" && $_GET["searchType"] == "questionA")
+    {
+      $query = "SELECT CTitle, Classroom, MeetingDays, BeginTime, EndTime, COUNT(*)
+                FROM Sections S, Course C, MeetingDays MD, EnrollmentRecord ER
+                WHERE S.CourseNum = " + $_GET["search1"] + " AND
+                  S.CourseNum = Course.CNumber AND
+                  MD.CourseNumber = S.CourseNum AND
+                  MD.SectionNumber = S.SNumber AND
+                  ER.SectionNum = S.CourseNum AND
+                  ER.CNum = S.SNumber
+                GROUP BY S.SNumber";
+
+      $tableHeaders = "<table id ='OutputTable'>
+                        <tr>
+                          <th>Course Title</th>
+                          <th>Classroom</th>
+                          <th>Meeting Days</th>
+                          <th>Begin Time</th>
+                          <th>End Time</th>
+                          <th>Number of Students Enrolled</th>
+                        </tr>";
+    }
+    else
+    {
+      $query = "SELECT C.CTitle, ER.Grade
+                FROM Course C, EnrollmentRecord ER
+                WHERE ER.StudCWID = " + $_GET["search1"] + " AND
+                  ER.Cnum = C.CNumber";
+
+      $tableHeaders = "<table id ='OutputTable'>
+                        <tr>
+                          <th>Course Title</th>
+                          <th>Grade</th>
+                        </tr>";
+    }
+
     // ===== PROFESSOR A =====
     // Given the social security number of a professor, list the titles, classrooms, meeting
     // days and time of his/her classes.
@@ -92,30 +177,15 @@
           ER.Cnum = C.CNumber;
     */
 
-    // basic query for testing
-    // $query = "SELECT * from Professor";
-
-    // makes a query based on the daat given
-    $query = "SELECT * from Professor WHERE Professor.SSN=" . htmlspecialchars($_GET["search1"]);
     echo $query."<br><br>";
 
     // reaches out to the db and makes the query and returns the result in $result
     $result = mysql_query($query, $link);
 
-    // while there are arrays to be read print them
-    echo "
-    <table id ='OutputTable'>
-      <tr>
-        <th>SSN</th>
-        <th>PName</th>
-        <th>PAddress</th>
-        <th>PTeleNum</th>
-        <th>Sex</th>
-        <th>PTitle</th>
-        <th>Salary</th>
-      </tr>
-    ";
+    // starts the table off
+    echo $tableHeaders;
 
+    // while there are arrays to be read print them
     while($row = mysql_fetch_array($result))
     {
       echo "<tr>";
@@ -151,24 +221,15 @@
       echo "</tr>";
     }
 
+    // closes off the table header
     echo "</table>";
     echo "<br><br>";
-
-    // a test to output data from the form to the php scriting site
-    // echo $_GET["search1"];
-    // echo "<br><br>";
-    // echo $_GET["search2"];
-  	// echo "<br><br>";
-		// echo $_GET["userType"];
-    // echo "<br><br>";
-    // echo $_GET["searchType"];
 
     // closes the link between the variable and the server
     mysql_close($link);
 
     ?>
   </div>
-
 
 	<div id="Nav">
 	<header>Search</header>
