@@ -47,7 +47,7 @@
     // makes a query based on the daat given and prepopulate the table headers
     $query = "";
     $tableHeaders = "";
-    $dataLoop;
+    $dataLoop = array();
     if ($_GET["userType"] == "Professor" && $_GET["searchType"] == "questionA")
     {
       $query = "SELECT PTitle, Classroom, MeetingDays, BeginTime, EndTime
@@ -71,7 +71,7 @@
     }
     elseif ($_GET["userType"] == "Professor" && $_GET["searchType"] == "questionB")
     {
-      $query = "SELECT Grade, COUNT(*)
+      $query = "SELECT Grade, COUNT(*) as total
                 FROM EnrollmentRecord ER
                 WHERE ER.SectionNum = " + $_GET["search1"] + " AND
                   ER.CNum = " + $_GET["search2"] +
@@ -82,10 +82,12 @@
                           <th>Grade</th>
                           <th>Count</th>
                         </tr>";
+
+      $dataLoop = array("Grade", "total");
     }
     elseif ($_GET["userType"] == "Student" && $_GET["searchType"] == "questionA")
     {
-      $query = "SELECT CTitle, Classroom, MeetingDays, BeginTime, EndTime, COUNT(*)
+      $query = "SELECT CTitle, Classroom, MeetingDays, BeginTime, EndTime, COUNT(*) as total
                 FROM Sections S, Course C, MeetingDays MD, EnrollmentRecord ER
                 WHERE S.CourseNum = " + $_GET["search1"] + " AND
                   S.CourseNum = Course.CNumber AND
@@ -104,6 +106,8 @@
                           <th>End Time</th>
                           <th>Number of Students Enrolled</th>
                         </tr>";
+
+      $dataLoop = array("CTitle", "Classroom", "MeetingDays", "BeginTime", "EndTime", "total");
     }
     else
     {
@@ -117,6 +121,8 @@
                           <th>Course Title</th>
                           <th>Grade</th>
                         </tr>";
+
+      $dataLoop = array("CTitle", "Classroom", "MeetingDays", "BeginTime", "EndTime", "total");
     }
 
     // ===== PROFESSOR A =====
@@ -226,13 +232,14 @@
 	<br><br>
 
 	<!-- Search form -->
-	<form id="searchForm" action="http://ecs.fullerton.edu/~cs332t19/index.php" method = "get">
-		<input type="submit" value="Search">
-
-		<br><br>
-		<text id="search1Text">Social Security Number</text><input id="searchField1" type="text" name="search1"><br>
-		<text id="search2Text"></text>
-	</form>
+  <form id="searchForm" action="http://ecs.fullerton.edu/~cs332t19/index.php" method="GET">
+    <input type="submit" value="Search">
+    <br><br>
+    <text id="search1Text">Social Security Number</text><input id="searchField1" type="text" name="search1"><br>
+    <text id="search2Text"></text>
+    <input id="searchFieldHidden1" type="hidden" name="userType" value="Professor"><br>
+    <input id="searchFieldHidden2" type="hidden" name="searchType" value="Social Security Number"><br>
+  </form>
 
 	</div>
 </body>
