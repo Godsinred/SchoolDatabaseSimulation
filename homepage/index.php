@@ -162,8 +162,6 @@
     // closes the link between the variable and the server
     mysql_close($link);
 
-    echo '<script type="text/javascript">updateSearchResultsTable();</script>';
-
     ?>
 	</div>
 

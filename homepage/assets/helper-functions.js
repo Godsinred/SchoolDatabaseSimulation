@@ -82,9 +82,23 @@ function removeExtraSearch()
   }
 }
 
-function updateSearchResultsTable()
+function createActionGetRequest()
 {
 
-  document.getElementById("testing").innerHTML = "ALTER";
+  var form = document.getElementById("searchForm");
+  var elements = form.elements;
+  var values = [];
 
+  for (var i = 0; i < elements.length; i++)
+  {
+    values.push(encodeURIComponent(elements[i].name) + '=' + encodeURIComponent(elements[i].value));
+  }
+
+  var userForm = document.getElementById("userType");
+  values.push(encodeURIComponent("userType") + '=' + encodeURIComponent(userForm.value));
+
+  var searchForm = document.getElementById("searchType");
+  values.push(encodeURIComponent("searchType") + '=' + encodeURIComponent(searchForm.value));
+
+  form.action += '?' + values.join('&');
 }
