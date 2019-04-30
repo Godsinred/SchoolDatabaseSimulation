@@ -59,16 +59,15 @@
 
       $tableHeaders = "<table id ='OutputTable'>
                         <tr>
-                          <th>SSN</th>
-                          <th>PName</th>
-                          <th>PAddress</th>
-                          <th>PTeleNum</th>
-                          <th>Sex</th>
-                          <th>PTitle</th>
-                          <th>Salary</th>
+                          <th>Name</th>
+                          <th>Title</th>
+                          <th>Classroom</th>
+                          <th>Meeting Days</th>
+                          <th>Begin Time</th>
+                          <th>End Time</th>
                         </tr>";
 
-        $dataLoop = array();
+      $dataLoop = array("PName", "PTitle", "Classroom", "MeetingDays", "BeginTime", "EndTime");
     }
     elseif ($_GET["userType"] == "Professor" && $_GET["searchType"] == "questionB")
     {
@@ -189,34 +188,12 @@
     while($row = mysql_fetch_array($result))
     {
       echo "<tr>";
-      echo
-      ("<td>"
-      .$row["SSN"]
-      ."</td>"
 
-      ."<td>"
-      .$row["PName"]
-      ."</td>"
-
-      ."<td>"
-      .$row["PAddress"]
-      ."</td>"
-
-      ."<td>"
-      .$row["PTeleNum"]
-      ."</td>"
-
-      ."<td>"
-      .$row["Sex"]
-      ."</td>"
-
-      ."<td>"
-      .$row["PTitle"]
-      ."</td>"
-
-      ."<td>"
-      .$row["Salary"]
-      ."</td>");
+      // prints out all the items based on the predefined items
+      for ($i = 0; $i < count($dataLoop); ++$i)
+      {
+        echo "<td>".$row[$dataLoop]."</td>";
+      }
 
       echo "</tr>";
     }
