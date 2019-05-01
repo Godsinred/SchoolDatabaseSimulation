@@ -152,6 +152,7 @@
 
 	<div id="Nav">
 	<header>Search</header>
+	<br>
 
 	<!-- Drop down list that can be selected for the user type -->
 	<select id="userType" onchange="updateSearchType()">
@@ -172,7 +173,7 @@
     <input type="submit" value="Search">
     <br><br>
 		<!-- Serach fields for the user to enter in their data -->
-    <text id="search1Text">Social Security Number</text><input id="searchField1" type="text" name="search1"><br>
+    <text id="search1Text">Social Security Number</text><input id="searchField1" type="text" name="search1" placeholder="123456789"><br>
     <text id="search2Text"></text>
 		<!-- these are my hacky way of sending more data into the GET request -->
     <input id="searchFieldHidden1" type="hidden" name="userType" value="Professor"><br>

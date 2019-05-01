@@ -31,6 +31,7 @@ function updateFormOptions()
   var searchForm = document.getElementById("searchForm");
   var hiddenSearch1 = document.getElementById("searchFieldHidden1");
   var hiddenSearch2 = document.getElementById("searchFieldHidden2");
+  var searchField1 = document.getElementById("searchField1");
 
   if(userDropDown.value == "Professor" && searchTypeDropDown.value == "questionB")
   {
@@ -39,13 +40,19 @@ function updateFormOptions()
     newElement.setAttribute("id", "searchField2");
     newElement.setAttribute("type", "text");
     newElement.setAttribute("name", "search2");
+    newElement.setAttribute("placeholder", "01");
     searchForm.appendChild(newElement);
 
     // updates the text for the search
     document.getElementById("search1Text").innerHTML = "Course Number";
     document.getElementById("search2Text").innerHTML = "Section Number";
+
+    // updates the hidden values to be passed by the GET request
     hiddenSearch1.value = "Professor";
     hiddenSearch2.value = "questionB";
+
+    // placeholder so that the user knows what type of input is expected
+    searchField1.placeholder = "200";
 
   }
   else if(userDropDown.value == "Professor" && searchTypeDropDown.value == "questionA")
@@ -57,6 +64,8 @@ function updateFormOptions()
 
     hiddenSearch1.value = "Professor";
     hiddenSearch2.value = "questionA";
+
+    searchField1.placeholder = "123456789";
   }
   else if(userDropDown.value == "Student" && searchTypeDropDown.value == "questionA")
   {
@@ -67,6 +76,8 @@ function updateFormOptions()
 
     hiddenSearch1.value = "Student";
     hiddenSearch2.value = "questionA";
+
+    searchField1.placeholder = "200";
   }
   else
   {
@@ -77,6 +88,8 @@ function updateFormOptions()
 
     hiddenSearch1.value = "Student";
     hiddenSearch2.value = "questionB";
+
+    searchField1.placeholder = "842412345";
   }
 }
 
