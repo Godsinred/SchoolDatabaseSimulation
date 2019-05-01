@@ -47,10 +47,12 @@
 	<form id="searchForm" action="http://ecs.fullerton.edu/~cs332t19/index.php" method="GET">
 		<input type="submit" value="Search">
 		<br><br>
+		<!-- Serach fields for the user to enter in their data -->
 		<text id="search1Text">Social Security Number</text><input id="searchField1" type="text" name="search1"><br>
 		<text id="search2Text"></text>
+		<!-- these are my hacky way of sending more data into the GET request -->
 		<input id="searchFieldHidden1" type="hidden" name="userType" value="Professor"><br>
-		<input id="searchFieldHidden2" type="hidden" name="searchType" value="Social Security Number"><br>
+		<input id="searchFieldHidden2" type="hidden" name="searchType" value="questionA"><br>
 	</form>
 
 	</div>
