@@ -34,7 +34,7 @@ header {
 	width:597px;
 	height:405px;
 	z-index:2;
-	color:#656565;
+	color:#000000;
 	font-size:13px;
 	font-family: Times New Roman;
 }
@@ -45,7 +45,7 @@ header {
 	top:220px;
 	width:220px;
 	height:566px;
-	color: #656565;
+	color: #000000;
 	font-size:12px;
   	font-family: Times New Roman;
 }
@@ -58,7 +58,7 @@ header {
  	width: 597px;
 	font-size: 13px;
 	font-family: Times New Roman;
-	color: #656565;
+	color: #000000;
 	text-align: left;
 }
 
@@ -83,12 +83,13 @@ td {
   border-left: solid 1px #000000;
 }
 
-/* Changes the hover color when you hover over the table */
-tr:hover {
-	background-color: #f5f5f5;
-}
-
 /* Makes the striping affect of the table */
 tr:nth-child(even) {
 	background-color: #f8cef2;
 }
+
+/* Changes the hover color when you hover over the table */
+tr:hover {
+	background-color: #c6def7;
+}
+
