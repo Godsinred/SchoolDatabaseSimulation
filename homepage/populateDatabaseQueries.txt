@@ -2,6 +2,10 @@
 
 // INSERT INTO <table VALUES (<col1>, <col2>....);
 
+==================================================================================================================================
+============== WHEN INSERTING INTO THIS FILE APPEND AT THE END SO I KNOW WHAT IS NEEDED TO BE ADDED TO THE DATABASE ==============
+==================================================================================================================================
+
 INSERT INTO Department VALUES(0000000001, "Computer Science", 7140001337, "Main Campus", 123456789);
 INSERT INTO Department VALUES(0000000002, "English", 3109871234, "Main Campus", 987654321);
 INSERT INTO Department VALUES(0000000003, "Math", 8084278901, "Main Campus", 123451234);
@@ -14,11 +18,11 @@ INSERT INTO Professor VALUES(999999999, "Donald Trump", "123 Nutwood, Fullerton 
 INSERT INTO Professor VALUES(111111111, "Michael Duong", "920 Far Away St, Berkley CA 94051", 7149131504, 'M', "Genius", 1337000);
 INSERT INTO Professor VALUES(987659876, "Thomas Rogers", "955, Beach Ave, Long Beach CA 90712", 8089445656, 'M', "Professor", 0549000);
 
-INSERT INTO CollegeDegrees(123456789, "Computer Science");
-INSERT INTO CollegeDegrees(987654321, "English");
-INSERT INTO CollegeDegrees(123451234, "Math");
-INSERT INTO CollegeDegrees(999999999, "Business");
-INSERT INTO CollegeDegrees(111111111, "Computer Science");
+INSERT INTO CollegeDegrees VALUES(123456789, "Computer Science");
+INSERT INTO CollegeDegrees VALUES(987654321, "English");
+INSERT INTO CollegeDegrees VALUES(123451234, "Math");
+INSERT INTO CollegeDegrees VALUES(999999999, "Business");
+INSERT INTO CollegeDegrees VALUES(111111111, "Computer Science");
 
 INSERT INTO Course VALUES(0000012345, "Javascript", "JS 4 noobs", 3, 0000000001);
 INSERT INTO Course VALUES(0000000777, "Essays", "Beg Essays", 2, 0000000002);
@@ -43,7 +47,7 @@ INSERT INTO Student VALUES(342590722, "Izzy Dinh", "1337 Amaz St, Tustin CA 9234
 INSERT INTO Student VALUES(453690784, "Kayla Nguyen", "1337 Amaz St, Tustin CA 92341", 1122334455, 0000000003);
 INSERT INTO Student VALUES(284037923, "Andrew Ramirez", "1337 Amaz St, Tustin CA 92341", 1133446688, 0000000004);
 INSERT INTO Student VALUES(452098200, "Carlos Jiminez", "1337 Amaz St, Tustin CA 92341", 1234554321, 0000000004);
-INSERT INTO Student VALUES(549300213, "Nena Tanabe", 458 Ferris Rd, Lakewood CA 90711, 7148293323, 0000000004);
+INSERT INTO Student VALUES(549300213, "Nena Tanabe", "458 Ferris Rd, Lakewood CA 90711", 7148293323, 0000000004);
 
 INSERT INTO Minor VALUES(873495711, 0000000001);
 INSERT INTO Minor VALUES(452098200, 0000000001);
@@ -52,14 +56,6 @@ INSERT INTO Minor VALUES(894913450, 0000000003);
 INSERT INTO Minor VALUES(453690784, 0000000004);
 INSERT INTO Minor VALUES(284037923, 0000000002);
 INSERT INTO Minor VALUES(549300213, 0000000002);
-
-INSERT INTO MeetingDays(01, 0000012345, Mo);
-INSERT INTO MeetingDays(01, 0000000777, Tu);
-INSERT INTO MeetingDays(01, 0000022222, We);
-INSERT INTO MeetingDays(01, 0000008888, Th);
-INESRT INTO MeetingDays(01, 0000000200, Fr);
-INSERT INTO MeetingDays(02, 0000000200, Sa);
-INSERT INTO MeetingDays(01, 0000000600, Tu);
 
 INSERT INTO EnrollmentRecord VALUES(842412345, 02, 0000000200, "A+");
 INSERT INTO EnrollmentRecord VALUES(842412345, 01, 0000012345, "A+");
@@ -102,3 +98,5 @@ INSERT INTO MeetingDays VALUES(01, 0000008888, "TH");
 INSERT INTO MeetingDays VALUES(01, 0000000200, "F");
 INSERT INTO MeetingDays VALUES(02, 0000000200, "Sa");
 INSERT INTO MeetingDays VALUES(02, 0000000200, "Su");
+INSERT INTO MeetingDays VALUES(01, 0000022222, "W");
+INSERT INTO MeetingDays VALUES(01, 0000000600, "TH");
