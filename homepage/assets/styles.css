@@ -79,8 +79,8 @@ input[type=submit]:hover {
 table { border-collapse: collapse; }
 /* Make only veritcal columns */
 td {
-  border-right: solid 1px #f00;
-  border-left: solid 1px #f00;
+  border-right: solid 1px #000000;
+  border-left: solid 1px #000000;
 }
 
 /* Changes the hover color when you hover over the table */
@@ -90,5 +90,5 @@ tr:hover {
 
 /* Makes the striping affect of the table */
 tr:nth-child(even) {
-	background-color: #f2f2f2;
+	background-color: #f8cef2;
 }
