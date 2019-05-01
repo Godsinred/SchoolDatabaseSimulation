@@ -2,6 +2,7 @@
   Style sheet for the page
 */
 
+/* Background styling */
 body {
 	background-color:#ffffff;
 	background-image:url(https://i.ibb.co/p3f3L34/db-bg.png);
@@ -49,6 +50,7 @@ header {
   	font-family: Times New Roman;
 }
 
+/* Result table styling */
 #OutputTable {
 	position:absolute;
 	left:0px;
@@ -60,6 +62,7 @@ header {
 	text-align: left;
 }
 
+/* Changes the Search button */
 input[type=submit] {
   background-color: #73b8ff;
   color: white;
@@ -71,4 +74,21 @@ input[type=submit] {
 
 input[type=submit]:hover {
   background-color: #72a8ff;
+}
+
+table { border-collapse: collapse; }
+/* Make only veritcal columns */
+td {
+  border-right: solid 1px #f00;
+  border-left: solid 1px #f00;
+}
+
+/* Changes the hover color when you hover over the table */
+tr:hover {
+	background-color: #f5f5f5;
+}
+
+/* Makes the striping affect of the table */
+tr:nth-child(even) {
+	background-color: #f2f2f2;
 }
