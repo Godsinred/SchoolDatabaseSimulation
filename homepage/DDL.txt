@@ -82,3 +82,10 @@ CREATE TABLE MeetingDays(
   primary key (SectionNumber, CourseNumber, MeetingDays),
   foreign key (CourseNumber, SectionNumber) references Sections (CourseNum, SNumber)
 );
+
+CREATE TABLE Prerequisite(
+  Course_Number numeric(10),
+  PreCNum numeric(10),
+  primary key (Course_Number, PreCNum),
+  foreign key (Course_Number) references Course (CNumber)
+);

@@ -69,7 +69,7 @@ R4 <- (EnrollmentRecord JOIN R3
         EnrollmentRecord.SectionNum = R3.CourseNum
         AND EnrollmentRecord.CNum = R3.SNumber)
 
-RESULT(CTitle, Classroom, MeetingDays, BeginTime, EndTime, NumberOfStudents) <- SNumber Ƒ COUNT(*)(R4)
+RESULT(CTitle, Classroom, MeetingDays, BeginTime, EndTime, NumberOfStudents) <- CourseNum, SNumber, MeetingDays Ƒ COUNT(*)(R4)
 
 // SQL query
 SELECT CTitle, Classroom, MeetingDays, BeginTime, EndTime, COUNT(*)
@@ -80,7 +80,7 @@ WHERE S.CourseNum = inputCNum AND
       MD.SectionNumber = S.SNumber AND
       ER.SectionNum = S.CourseNum AND
       ER.CNum = S.SNumber
-GROUP BY S.SNumber;
+GROUP BY S.CourseNum, S.SNumber, MD.MeetingDays;
 
 ==================================================================================================================
 ==================================================================================================================
@@ -99,4 +99,4 @@ RESULT <- PROJECT Course.CTitle, EnrollmentRecord.Grade (R1 JOIN Course
 SELECT C.CTitle, ER.Grade
 FROM Course C, EnrollmentRecord ER
 WHERE ER.StudCWID = inputCWID AND
-      ER.Cnum = C.CNumber;
+      ER.CNum = C.CNumber;
