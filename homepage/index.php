@@ -120,7 +120,7 @@
     }
 
 		// temp echo to make sure that the right query is being sent
-    echo $query."<br><br>";
+    // echo $query."<br><br>";
 
     // reaches out to the db and makes the query and returns the result in $result
     $result = mysql_query($query, $link);
@@ -144,7 +144,6 @@
 
     // closes off the table header
     echo "</table>";
-    echo "<br><br>";
 
     // closes the link between the variable and the server
     mysql_close($link);
