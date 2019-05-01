@@ -2,7 +2,7 @@
 
 <html>
 <head>
-	<title>School Database Simmulation</title> </head>
+	<title>School Database Simulation</title> </head>
 
 	<!-- Links to external style and helper functions -->
 	<script src="assets/helper-functions.js"></script>
@@ -18,7 +18,9 @@
 
 	<div id="Main">
 	<header>Results</header>
-		<!-- use the php tag to integrate php into your code -->
+    <!-- use the php tag to integrate php into your code -->
+    <img src="https://i.ibb.co/6XMfjTd/header-underline.png">
+	  <br><br>
     <?php
 
     // connects to the database and makes a link
@@ -152,7 +154,8 @@
 
 	<div id="Nav">
 	<header>Search</header>
-	<br>
+  <img src="https://i.ibb.co/2KjgxGV/search-underline.png">
+	<br><br>
 
 	<!-- Drop down list that can be selected for the user type -->
 	<select id="userType" onchange="updateSearchType()">
