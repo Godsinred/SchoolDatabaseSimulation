@@ -89,13 +89,13 @@
     {
       $query = "SELECT CTitle, Classroom, MeetingDays, BeginTime, EndTime, COUNT(*) as total
                 FROM Sections S, Course C, MeetingDays MD, EnrollmentRecord ER
-                WHERE S.CourseNum = " + $_GET["search1"] + " AND
-                  S.CourseNum = Course.CNumber AND
+                WHERE S.CourseNum = ".$_GET["search1"]." AND
+                  S.CourseNum = C.CNumber AND
                   MD.CourseNumber = S.CourseNum AND
                   MD.SectionNumber = S.SNumber AND
-                  ER.SectionNum = S.CourseNum AND
-                  ER.CNum = S.SNumber
-                GROUP BY S.SNumber";
+                  ER.SectionNum = S.SNumber AND
+                  ER.CNum = S.CourseNum
+                GROUP BY CTitle, Classroom, MeetingDays, BeginTime, EndTime";
 
       $tableHeaders = "<table id ='OutputTable'>
                         <tr>
