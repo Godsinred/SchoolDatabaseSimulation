@@ -82,7 +82,7 @@
     }
     elseif ($_GET["userType"] == "Student" && $_GET["searchType"] == "questionA")
     {
-      $query = "SELECT CTitle, Classroom, MeetingDays, BeginTime, EndTime, COUNT(*) as total
+      $query = "SELECT CTitle, SNumber, Classroom, MeetingDays, BeginTime, EndTime, COUNT(*) as total
                 FROM Sections S, Course C, MeetingDays MD, EnrollmentRecord ER
                 WHERE S.CourseNum = ".$_GET["search1"]." AND
                   S.CourseNum = C.CNumber AND
@@ -95,6 +95,7 @@
       $tableHeaders = "<table id ='OutputTable'>
                         <tr>
                           <th>Course Title</th>
+													<th>Section Number</th>
                           <th>Classroom</th>
                           <th>Meeting Days</th>
                           <th>Begin Time</th>
@@ -102,7 +103,7 @@
                           <th>Number of Students Enrolled</th>
                         </tr>";
 
-      $dataLoop = array("CTitle", "Classroom", "MeetingDays", "BeginTime", "EndTime", "total");
+      $dataLoop = array("CTitle", "Section Number", "Classroom", "MeetingDays", "BeginTime", "EndTime", "total");
     }
     else
     {

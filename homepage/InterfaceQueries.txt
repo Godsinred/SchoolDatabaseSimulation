@@ -20,12 +20,12 @@ RESULT <- PROJECT PTitle, Classroom, MeetingDays, BeginTime, EndTime(R2 JOIN Pro
                                                                       R2.ProfSSN = Professor.SSN)
 
 // SQL query
-SELECT PTitle, Classroom, MeetingDays, BeginTime, EndTime
-FROM Sections S, MeetingDays MD, Professor P
-WHERE S.ProfSSN = inputSSN AND
-      S.CourseNum = MD.CourseNumber AND
-      S.SNumber = MD.SectionNumber AND
-      S.ProfSSN = P.SSN;
+SELECT PName, PTitle, Classroom, MeetingDays, BeginTime, EndTime
+          FROM Sections S, MeetingDays MD, Professor P
+          WHERE S.ProfSSN = inputSSN AND
+          S.CourseNum = MD.CourseNumber AND
+          S.SNumber = MD.SectionNumber AND
+          S.ProfSSN = P.SSN;
 
 ==================================================================================================================
 ==================================================================================================================
@@ -41,11 +41,11 @@ R1 <- SELECT SectionNum = inputSNum AND CNum = inputCNum (EnrollmentRecord)
 RESULT <- Grade Ƒ COUNT(*)(R1)
 
 // SQL query
-SELECT Grade, COUNT(*)
-FROM EnrollmentRecord ER
-WHERE ER.SectionNum = inputSNum AND
-      ER.CNum = inputCNum
-GROUP BY Grade;
+SELECT Grade, COUNT(*) as total
+      FROM EnrollmentRecord ER
+      WHERE  ER.CNum= inputCNum AND
+      ER.SectionNum = inputSNum
+      GROUP BY Grade;
 
 ==================================================================================================================
 For the students:
@@ -72,15 +72,15 @@ R4 <- (EnrollmentRecord JOIN R3
 RESULT(CTitle, Classroom, MeetingDays, BeginTime, EndTime, NumberOfStudents) <- CourseNum, SNumber, MeetingDays Ƒ COUNT(*)(R4)
 
 // SQL query
-SELECT CTitle, Classroom, MeetingDays, BeginTime, EndTime, COUNT(*)
+SELECT CTitle, SNumber, Classroom, MeetingDays, BeginTime, EndTime, COUNT(*) as total
 FROM Sections S, Course C, MeetingDays MD, EnrollmentRecord ER
 WHERE S.CourseNum = inputCNum AND
-      S.CourseNum = Course.CNumber AND
+      S.CourseNum = C.CNumber AND
       MD.CourseNumber = S.CourseNum AND
       MD.SectionNumber = S.SNumber AND
-      ER.SectionNum = S.CourseNum AND
-      ER.CNum = S.SNumber
-GROUP BY S.CourseNum, S.SNumber, MD.MeetingDays;
+      ER.SectionNum = S.SNumber AND
+      ER.CNum = S.CourseNum
+GROUP BY CTitle, Classroom, MeetingDays, BeginTime, EndTime;
 
 ==================================================================================================================
 ==================================================================================================================
