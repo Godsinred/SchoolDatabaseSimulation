@@ -64,7 +64,7 @@ Website URL: http://ecs.fullerton.edu/~cs332t19/
 </div>
 
 ### Search Results
-*Results may vary since we are consistenly adding more data for larger search results*
+*Results may vary since we are consistently adding more data for larger search results*
 
 Did a search for Professor and Social Security Number with an input of 111111111.
 
