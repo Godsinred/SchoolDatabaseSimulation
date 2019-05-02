@@ -54,9 +54,11 @@ When adding data to this file please make it clear what needs to be added by app
 
 #### Different Search Options
 
-<img src="Screenshots/search1.png" alt="Prof/SSN" width="25%">
-<img src="Screenshots/search2.png" alt="Prof/CN_SN" width="25%">
-<img src="Screenshots/search3.png" alt="Stud/CN" width="25%">
-<img src="Screenshots/search4.png" alt="Stud/CWID" width="25%">
+<div display: "inline-block">
+  <img src="Screenshots/search1.png" alt="Prof/SSN" width="25%">
+  <img src="Screenshots/search2.png" alt="Prof/CN_SN" width="25%">
+  <img src="Screenshots/search3.png" alt="Stud/CN" width="25%">
+  <img src="Screenshots/search4.png" alt="Stud/CWID" width="25%">
+</div>
 
 #### Search Results
