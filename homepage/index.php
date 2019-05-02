@@ -103,7 +103,7 @@
                           <th>Number of Students Enrolled</th>
                         </tr>";
 
-      $dataLoop = array("CTitle", "Section Number", "Classroom", "MeetingDays", "BeginTime", "EndTime", "total");
+      $dataLoop = array("CTitle", "Section Number" "Classroom", "MeetingDays", "BeginTime", "EndTime", "total");
     }
     else
     {
