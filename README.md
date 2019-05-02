@@ -50,6 +50,7 @@ When adding data to this file please make it clear what needs to be added by app
 ## Screenshots of the interface
 
 ### Welcome/Homepage for the website
+Website URL: http://ecs.fullerton.edu/~cs332t19/
 ![Homepage](Screenshots/homepage.png)
 
 ### Different Search Options
