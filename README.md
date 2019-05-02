@@ -49,4 +49,11 @@ When adding data to this file please make it clear what needs to be added by app
 
 ## Screenshots of the interface
 
+#### Welcome/Homepage for the website
 ![Homepage](Screenshots/homepage.png)
+
+#### Different Search Options
+
+![Prof/SSN](Screenshots/search1.png) ![Prof/CN_SN](Screenshots/search2.png) ![Stud/CN](Screenshots/search3.png) ![Stud/CWID](Screenshots/search4.png)
+
+#### Search Results
