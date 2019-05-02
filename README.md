@@ -49,4 +49,4 @@ When adding data to this file please make it clear what needs to be added by app
 
 ## Screenshots of the interface
 
-![Homepage](homepage.png)
+![Homepage](Screenshots/homepage.png)
