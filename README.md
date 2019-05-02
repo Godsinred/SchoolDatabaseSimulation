@@ -49,10 +49,10 @@ When adding data to this file please make it clear what needs to be added by app
 
 ## Screenshots of the interface
 
-#### Welcome/Homepage for the website
+### Welcome/Homepage for the website
 ![Homepage](Screenshots/homepage.png)
 
-#### Different Search Options
+### Different Search Options
 
 <div display: "inline-block">
   <img src="Screenshots/search1.png" alt="Prof/SSN" width="20%">
@@ -61,6 +61,17 @@ When adding data to this file please make it clear what needs to be added by app
   <img src="Screenshots/search4.png" alt="Stud/CWID" width="20%">
 </div>
 
-#### Search Results
+### Search Results
+*Results may vary since we are consistenly adding more data for larger search results*
 
-![Homepage](Screenshots/homepage.png)
+Did a search for Professor and Social Security Number with an input of 111111111
+![Prof_SSN_Search](Screenshots/Prof_SSN_Search.PNG)
+
+Did a search for Professor, Course Number, and Section Number with an input of 200 for Course Number and 1 for Section Number
+![Prof_CN_SN_Search](Screenshots/Prof_CN_SN_Search.PNG)
+
+Did a search for Student and Course Number with an input of 200
+![Stud_CN_Search](Screenshots/Stud_CN_Search.PNG)
+
+Did a search for Student and Campus Wide ID with an input of 842412345
+![Stud_CWID_Search](Screenshots/Stud_CWID_Search.PNG)
