@@ -62,3 +62,5 @@ When adding data to this file please make it clear what needs to be added by app
 </div>
 
 #### Search Results
+
+![Homepage](Screenshots/homepage.png)
