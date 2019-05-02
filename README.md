@@ -66,18 +66,25 @@ Website URL: http://ecs.fullerton.edu/~cs332t19/
 ### Search Results
 *Results may vary since we are consistenly adding more data for larger search results*
 
-Did a search for Professor and Social Security Number with an input of 111111111
+Did a search for Professor and Social Security Number with an input of 111111111.
 
 ![Prof_SSN_Search](Screenshots/Prof_SSN_Search.PNG)
 
-Did a search for Professor, Course Number, and Section Number with an input of 200 for Course Number and 1 for Section Number
+Did a search for Professor, Course Number, and Section Number with an input of 200 for Course Number and 1 for Section Number.
 
 ![Prof_CN_SN_Search](Screenshots/Prof_CN_SN_Search.PNG)
 
-Did a search for Student and Course Number with an input of 200
+Did a search for Student and Course Number with an input of 200.
 
 ![Stud_CN_Search](Screenshots/Stud_CN_Search.PNG)
 
-Did a search for Student and Campus Wide ID with an input of 842412345
+Did a search for Student and Campus Wide ID with an input of 842412345.
 
 ![Stud_CWID_Search](Screenshots/Stud_CWID_Search.PNG)
+
+## Questions, Comments, Concerns
+
+If you have any questions, comments, or concerns please reach out to me at:
+  jtishii@yahoo.com
+  jishii@csu.fullerton.edu
+  johannatnguyen@gmail.com
