@@ -85,6 +85,6 @@ Did a search for Student and Campus Wide ID with an input of 842412345.
 ## Questions, Comments, Concerns
 
 If you have any questions, comments, or concerns please reach out to me at:
-&nbsp;&nbsp;&nbsp;&nbsp;jtishii@yahoo.com
-&nbsp;&nbsp;&nbsp;&nbsp;jishii@csu.fullerton.edu
-&nbsp;&nbsp;&nbsp;&nbsp;johannatnguyen@gmail.com
+&lt;p&gt;jtishii@yahoo.com&lt;/p&gt;
+&lt;p&gt;jishii@csu.fullerton.edu&lt;/p&gt;
+&lt;p&gt;johannatnguyen@gmail.com&lt;/p&gt;
