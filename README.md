@@ -85,28 +85,28 @@ Did a search for Student and Campus Wide ID with an input of 842412345.
 ### How The Search Results Work In The Backend
 
 '''
-    // connects to the database and makes a link
-    $link = mysql_connect('ecs.fullerton.edu', 'cs332t19', <password in here>);
-  
-    // checks to see if the connection was made successfully. if not it closes
-    if (!$link)
-    {
-      die('Could not connect to shell.ecs.fullerton.edu');
-    }
+// connects to the database and makes a link
+$link = mysql_connect('ecs.fullerton.edu', 'cs332t19', <password in here>);
 
-    // selects the db and checks to make sure it was successfully connected
-    if(!mysql_select_db("cs332t19",$link))
-    {
-      die("Unable to select database \'cs332t19\'");
-    }
-    
-    $query = <based on the $_GET parameters that the user selected in the drop down and the input in the search field>
+// checks to see if the connection was made successfully. if not it closes
+if (!$link)
+{
+  die('Could not connect to shell.ecs.fullerton.edu');
+}
 
-    // reaches out to the db and makes the query and returns the result in $result
-    $result = mysql_query($query, $link);
+// selects the db and checks to make sure it was successfully connected
+if(!mysql_select_db("cs332t19",$link))
+{
+  die("Unable to select database \'cs332t19\'");
+}
 
-    // closes link
-    mysql_close($link);
+$query = <based on the $_GET parameters that the user selected in the drop down and the input in the search field>
+
+// reaches out to the db and makes the query and returns the result in $result
+$result = mysql_query($query, $link);
+
+// closes link
+mysql_close($link);
 '''
 
 ![Backend1](Screenshots/Backend1.PNG)
