@@ -109,7 +109,10 @@ Did a search for Student and Campus Wide ID with an input of 842412345.
   mysql_close($link);
 ```
 
+#### Some Examples Of Code Running On The Server
+
 ![Backend1](Screenshots/Backend1.png)
+
 
 ![Backend2](Screenshots/Backend2.png)
 
