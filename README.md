@@ -84,8 +84,7 @@ Did a search for Student and Campus Wide ID with an input of 842412345.
 
 ### How The Search Results Work In The Backend
 
-'''
-
+```
   // connects to the database and makes a link
   $link = mysql_connect('ecs.fullerton.edu', 'cs332t19', <password in here>);
 
@@ -108,7 +107,7 @@ Did a search for Student and Campus Wide ID with an input of 842412345.
 
   // closes link
   mysql_close($link);
-'''
+```
 
 ![Backend1](Screenshots/Backend1.png)
 
